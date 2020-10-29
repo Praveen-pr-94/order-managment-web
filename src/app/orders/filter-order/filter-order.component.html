@@ -1,0 +1,24 @@
+<div class="row">
+      <div class="container">
+        <h4>Search orders</h4>
+        <hr>
+        <div class="row">
+          <label for="user"><b>User</b></label>
+          <select id="seachElm">
+            <option value="" disabled>Choose a user</option>
+            <option value="alltime">
+              All times
+            </option>
+            <option value="lastWeek">
+              Last 7 days
+            </option>
+            <option value="today">
+              Today
+            </option>
+          </select>
+          <input type="text" placeholder="search">
+          <button (click)="searchOrder()">search</button>
+        </div>
+        </div>
+  </div>
+  

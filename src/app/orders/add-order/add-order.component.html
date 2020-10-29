@@ -1,0 +1,33 @@
+<div class="row">
+  <form [formGroup]="addOrderForm" (ngSubmit)="addOrder()">
+    <div class="container">
+      <h4>Add new order</h4>
+      <hr>
+      <div class="row">
+        <label for="user"><b>User</b></label>
+        <select formControlName="user">
+          <option value="" disabled>Choose a user</option>
+          <option *ngFor="let ur of users" value={{ur._id}}>
+            {{ur.firstName}} {{ur.lastName}}
+          </option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="product"><b>Product</b></label>
+        <select formControlName="product">
+          <option value="" disabled>Choose a product</option>
+          <option *ngFor="let pr of product" value={{pr._id}}>
+            {{pr.productName}}
+          </option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="quantity"><b>Quantity</b></label>
+        <input type="text" formControlName="quantity">
+      </div>
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">add</button>
+      </div>
+    </div>
+  </form>
+</div>

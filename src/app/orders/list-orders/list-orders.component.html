@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="container">
+      <h4>List orders</h4>
+      <hr>
+      <div class="row">
+      
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">User</th>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Date</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ord of orders; let i= index ">
+              <th scope="row">{{i+1}}</th>
+              <td>{{ord.user.firstName}} {{ord.user.lastName}}</td>
+              <td>{{ord.product.productName}}</td>
+              <td>{{ord.product.price}}</td>
+              <td>{{ord.quantity}}</td>
+              <td>{{ord.createdAt}}</td>
+              <td>
+                <button (click)="deleteOrder(ord._id)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+</div>
